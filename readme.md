@@ -1,6 +1,6 @@
 # Didact
 
-https://github.com/pomber/didact
+forked from https://github.com/pomber/didact
 
 #### How to run
 
