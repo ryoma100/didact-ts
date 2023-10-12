@@ -10,7 +10,9 @@
     "start": "react-scripts start"
   },
   "devDependencies": {
-    "react-scripts": "^5.0.1"
+    "@types/react": "^18.2.28",
+    "react-scripts": "^5.0.1",
+    "typescript": "^5.2.2"
   },
   "browserslist": {
     "production": [
