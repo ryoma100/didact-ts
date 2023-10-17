@@ -4,7 +4,7 @@ type Hook<T> = {
 }
 
 type Fiber = {
-  type?: keyof React.ReactHTML | "TEXT_ELEMENT" | React.FC,
+  type?: keyof React.ReactHTML | "TEXT_ELEMENT" | ((props: {}) => JSX.Element | null),
   props: {} & {children?: (React.ReactElement | string)[]},
   dom: HTMLElement | Text | null,
   parent?: Fiber | null,
@@ -18,7 +18,7 @@ type HostFiber = Omit<Fiber, 'type'> & {
   type: keyof React.ReactHTML | "TEXT_ELEMENT"
 }
 type FunctionFiber = Omit<Fiber, 'type'> & {
-  type: React.FC
+  type: ((props: {}) => JSX.Element | null)
 }
 
 function createElement(type: Fiber['type'], props: {}, ...children: (React.ReactElement | string)[]) {
